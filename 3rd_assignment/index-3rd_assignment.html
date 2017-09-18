@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <title>Example 2 --News</title>
+     <link type="text/css" rel="stylesheet" href="style.css" media="all"/>
+    
+     <script type="text/javascript">
+              function sidebar2_onMouseover(){
+                var sidebar2 = document.getElementById("sidebar2");
+                sidebar2.className = "newStyle";
+                sidebar2.innerHTML = "<h2>See here!</h2><p>I can do it by myself!</p>";
+              }
+
+              function sidebar2_onMouseOut() {
+                var sidebar2 = document.getElementById("sidebar2");
+                sidebar2.className = "defaultStyle";
+                sidebar2.innerHTML = "<h2>Be yourself</h2><p>See what can be shown here.</p>";
+              }
+
+              function validateForm() {
+              	var x = document.forms["myForm"]["fname"].value;
+              	var sidebar2 = document.getElementById("sidebar2")
+              	sidebar2.innerHTML = "<p> The value entered is：</p>"+x;
+              }
+     </script>
+
+   </head>
+   
+   <body>
+     <header class="banner">
+       <h1>News</h1>
+       <p>Local and National News</p>
+     </header>
+
+     <nav>
+       <ul id="navlist">
+         <li><a href="Home.html" onmouseover="sidebar2_onMouseover()" onmouseout="sidebar2_onMouseOut()">Home
+         </a></li>
+         <li><a href="archive.html" onmouseover="sidebar2_onMouseover()" onmouseout="sidebar2_onMouseOut()">Archives</a></li>
+         <li><a href="about.html" onmouseover="sidebar2_onMouseover()" onmouseout="sidebar2_onMouseOut()">About</a></li>
+       </ul>
+     </nav>
+      <main>
+         <section>
+            <h2 id="Local">Local News</h2>
+
+            <article>
+              <header>
+                <h3>Fire frighters rescue man from building</h3>
+                <p>(author,date)</p>
+              </header>
+              <p>This is the story text.</p>
+            </article>
+            <article>
+              <header>
+                <h3>New library to be built</h3>
+                <p>(author,date)</p>
+              </header>
+              <p>This is the story text.</p>
+            </article>
+         </section>
+         <section>
+            <h2>National News</h2>
+            <article>
+              <header>
+                <h3>Snow storm is making travel difficult</h3>
+                <p>(author,date)</p>
+              </header>
+              <p>This is the story text.</p>
+            </article>
+            <article>
+              <header>
+                <h3>Thousands are without power</h3>
+                <p>(author,date)</p>
+              </header>
+              <p>This is the story text.</p>
+            </article>
+         </section>
+      </main>
+     <aside>
+       <h2>Be a news reporter</h2>
+       <p>If you see news happening-Send us a text.</p>
+     </aside>
+     <aside>
+     <div id="sidebar2" class="defaultStyle">
+       <h2>Be yourself</h2>
+       <p>See what can be shown here.</p>
+     </div>
+     </aside>
+     <aside>
+     <form name="myForm" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
+       Enter: <input type="text" name="fname">
+       <a href="javascript: validateForm()">Submit</a>
+     </form>
+
+</aside>
+
+     <footer>
+       <p>Footer information</p>
+   </body>
+</html>
